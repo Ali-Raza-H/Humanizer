@@ -1,7 +1,7 @@
 async function humanize() {
     const input = document.getElementById("inputText").value;
 
-    const response = await fetch("http://0.0.0.0:10000", {
+    const response = await fetch("https://humanizer-2qzw.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -18,6 +18,7 @@ async function humanize() {
     document.getElementById("result").innerHTML =
         "<h3>Humanized Text:</h3><p>" + data.humanized_text + "</p>";
 }
+
 
 
 
