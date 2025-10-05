@@ -2,7 +2,7 @@ async function humanize() {
     const input = document.getElementById("inputText").value;
 
     try {
-        const response = await fetch("https://humanizer-2qzw.onrender.com/humanize", {
+        const response = await fetch("http://127.0.0.1:5000/humanize", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: input })
@@ -23,6 +23,7 @@ async function humanize() {
             "<p style='color:red;'>Network error: " + error + "</p>";
     }
 }
+
 
 
 
