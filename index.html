@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Humanizer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>AI Humanizer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
     <h1>AI Humanizer</h1>
-    <textarea id="inputText" placeholder="Paste text here..."></textarea><br>
-    <button onclick="humanize()">Humanize</button>
-    <div id="result"></div>
 
-    <script src="main.js"></script>
+    <div class="input-section">
+    <div class="input-wrapper">
+        <textarea id="inputText" placeholder="Paste text here..."></textarea>
+        <div id="inputCounter">0 words | 0 chars</div>
+    </div>
+    </div>
+
+
+    <button id="humanizeBtn" onclick="humanize()">Humanize</button>
+
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+    </div>
+
+    <div id="resultBox">
+      <div class="result-header">
+        <h3>Humanized Text</h3>
+        <button id="copyBtn" onclick="copyOutput()">Copy</button>
+      </div>
+      <div id="result"></div>
+      <div class="counter" id="outputCounter">0 words | 0 chars</div>
+    </div>
+  </div>
+
+  
+
+  <script src="main.js"></script>
 </body>
 </html>
